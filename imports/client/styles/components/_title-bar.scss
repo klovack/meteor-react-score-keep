@@ -1,0 +1,23 @@
+.title-bar {
+  background: #17326F;
+  color: $quaternary-color;
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  h1 {
+    font-weight: 300;
+    font-size: 2.6rem;
+  }
+  
+  .title-bar__wrapper {
+    grid-column: 2/3;
+    padding: $min-spacing;
+  }
+  
+  .title-bar__subtitle {
+    font-size: 1.6rem;
+    color: $secondary-color;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,30 @@
+@import './var';
+
+// CSS reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // make the root html to 10px, so it's easier to multiply the font
+  font-size: $root-font-size;
+}
+
+body {
+  color: $tertiary-color;
+  font-family: $font-stack;
+  background: $quaternary-color;
+  font-size: 1.6rem;
+}
+
+input, button, select {
+  font-size: 1.3rem;
+}
+
+@import './components/wrapper';
+@import './components/title-bar';
+@import './components/section';
+@import './components/button';
+@import './components/player';
+@import './components/form';

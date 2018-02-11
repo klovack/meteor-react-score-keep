@@ -1,0 +1,9 @@
+.form {
+  display: flex;
+
+  .form__input {
+    flex-grow: 2;
+    padding-left: $min-spacing;
+    border: 1px solid transparentize($tertiary-color, 0.5);
+  }
+}

@@ -1,0 +1,25 @@
+.player {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  > div:first-child {
+    max-width: 40%;
+  }
+
+  .player__name {
+    font-weight: bold;
+    font-size: 1.6rem;
+    overflow-wrap: break-word;
+  }
+
+  .player__stats {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+
+  .player__actions {
+    flex-shrink: 0;
+  }
+}

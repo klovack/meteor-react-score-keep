@@ -1,0 +1,28 @@
+.button {
+  border: 1px solid $tertiary-color;
+  background: white;
+  color: $tertiary-color;
+  cursor: pointer;
+  font-weight: bold;
+  height: 4rem;
+  line-height: 1;
+  margin-left: $min-spacing;
+  outline: none;
+  padding: $min-spacing;
+  transition: background .2s ease, transform .2s ease;
+
+  &.round {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &:hover, &:focus {
+    background: $secondary-color;
+  }
+
+  &:active {
+    background: $secondary-color * 2;
+    transform: scale(1.1);
+  }
+}
