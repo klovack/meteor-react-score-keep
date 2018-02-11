@@ -16,3 +16,15 @@
   text-align: center;
   color: $primary-color;
 }
+
+.item--position-1 {
+  background: transparentize($primary-color, 0.7);
+}
+
+.item--position-2 {
+  background: transparentize($secondary-color, 0.7);
+}
+
+.item--position-3 {
+  background: transparentize($quinary-color, 0.7);
+}

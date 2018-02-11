@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { Tracker } from 'meteor/tracker';
 
-import Players from '../imports/api/players';
+import { Players, calculatePlayerPositions } from '../imports/api/players';
 import App from '../imports/ui/App';
 
 Meteor.startup(() => {
   // Render players to the screen everytime the data changes
   Tracker.autorun(() => {
     const players = Players.find({}, { sort: { score: -1 } }).fetch();
-    const title = 'Siapa Unggul';
+    const title = 'Who\'s Winning?';
+    const positionedPlayers = calculatePlayerPositions(players);
 
-    ReactDOM.render(<App title={title} players={players} />, document.getElementById('app'));
+    ReactDOM.render(<App title={title} players={positionedPlayers} />, document.getElementById('app'));
   });
 });

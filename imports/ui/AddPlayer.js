@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Players from '../api/players';
+import { Players } from '../api/players';
 
 export default class AddPlayer extends React.Component {
   constructor(props) {

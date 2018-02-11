@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Players from '../api/players';
+import { Players } from '../api/players';
 
 export default class Player extends React.Component {
   constructor(props) {
@@ -31,14 +31,16 @@ export default class Player extends React.Component {
   }
 
   render() {
+    const itemClassName = `item--position-${this.props.player.rank}`;
+
     return (
-      <div className="item player">
+      <div className={`${itemClassName} item player`}>
         <div>
           <div className="player__name">
             {this.props.player.name}
           </div>
           <div className="player__stats">
-            has {this.props.player.score} point(s).
+            { this.props.player.position } place - {this.props.player.score} point(s).
           </div>
         </div>
         <div className="player__actions">
@@ -57,5 +59,7 @@ Player.propTypes = {
     _id: PropTypes.string,
     name: PropTypes.string,
     score: PropTypes.number,
+    rank: PropTypes.number,
+    position: PropTypes.string,
   }).isRequired,
 };

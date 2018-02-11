@@ -8,7 +8,7 @@ import PlayerList from './PlayerList';
 function App(props) {
   return (
     <div className="wrapper-grid">
-      <TitleBar title={props.title} subtitle="Created by Rizki" />
+      <TitleBar title={props.title} subtitle="Created by Rizki 2018" />
       <PlayerList players={props.players} />
       <AddPlayer />
     </div>
