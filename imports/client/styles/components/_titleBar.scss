@@ -1,0 +1,31 @@
+.title-bar {
+  padding: $gen-spacing 0;
+}
+
+.title-bar__form {
+  width: $site-max-width;
+  display: flex;
+  margin: 0 auto;
+}
+
+.title-bar__game-name {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: $base-font-color;
+  display: block;
+  flex-grow: 1;
+  font-size: $largest-font-size;
+  min-width: 200px;
+  padding: $gen-spacing;
+  transition: border 300ms ease-in-out;
+
+  &::placeholder {
+    color: transparentize($base-font-color, .5);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $base-title-border-color;
+  }
+}

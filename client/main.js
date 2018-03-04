@@ -10,9 +10,8 @@ Meteor.startup(() => {
   // Render players to the screen everytime the data changes
   Tracker.autorun(() => {
     const players = Players.find({}, { sort: { score: -1 } }).fetch();
-    const title = 'Who\'s Winning?';
     const positionedPlayers = calculatePlayerPositions(players);
 
-    ReactDOM.render(<App title={title} players={positionedPlayers} />, document.getElementById('app'));
+    ReactDOM.render(<App players={positionedPlayers} />, document.getElementById('app'));
   });
 });

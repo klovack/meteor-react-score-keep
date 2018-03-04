@@ -1,25 +1,22 @@
-.player {
-  align-items: center;
+.player-wrapper {
+  background-color: $base-addP-bg;
+  color: $secondary-font-color;
+  display: flex;
+  flex-direction: column;
+  margin: $gen-spacing 0;
+  overflow-wrap: break-word;
+  padding: $gen-spacing;
+}
+
+.player__property {
+  margin-top: $small-spacing;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: baseline;
+}
 
-  > div:first-child {
-    max-width: 40%;
-  }
-
-  .player__name {
-    font-weight: bold;
-    font-size: 1.6rem;
-    overflow-wrap: break-word;
-  }
-
-  .player__stats {
-    font-size: 1.3rem;
-    font-style: italic;
-  }
-
-  .player__actions {
-    flex-shrink: 0;
+@media screen and (max-width: 530px) {
+  .player__property {
+    flex-direction: column;
   }
 }

@@ -7,8 +7,8 @@ import PlayerList from './PlayerList';
 
 function App(props) {
   return (
-    <div className="wrapper-grid">
-      <TitleBar title={props.title} subtitle="Created by Rizki 2018" />
+    <div className="app">
+      <TitleBar />
       <PlayerList players={props.players} />
       <AddPlayer />
     </div>
@@ -16,16 +16,11 @@ function App(props) {
 }
 
 App.propTypes = {
-  title: PropTypes.string,
   players: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string,
     name: PropTypes.string,
     score: PropTypes.number,
   })).isRequired,
-};
-
-App.defaultProps = {
-  title: 'Score Keep',
 };
 
 export default App;

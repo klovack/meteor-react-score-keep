@@ -1,36 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 export default class TitleBar extends React.Component {
   constructor(props) {
     super(props);
-    this.renderSubtitle = this.renderSubtitle.bind(this);
+    this.state = {
+      gameName: '',
+    };
+
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onGameNameInput = this.onGameNameInput.bind(this);
   }
 
-  renderSubtitle() {
-    if (this.props.subtitle) {
-      return <h3 className="title-bar__subtitle">{this.props.subtitle}</h3>;
-    }
-    return null;
+  onSubmit(e) {
+    e.preventDefault();
+
+    this.gameName.disabled = true;
+
+    setTimeout(() => {
+      this.gameName.disabled = false;
+    }, 800);
+  }
+
+  onGameNameInput(e) {
+    this.setState({
+      gameName: e.target.value,
+    });
   }
 
   render() {
     return (
       <div className="title-bar">
-        <div className="title-bar__wrapper">
-          <h1>{this.props.title}</h1>
-          {this.renderSubtitle()}
-        </div>
+        <form className="title-bar__form" onSubmit={this.onSubmit}>
+          <input
+            className="title-bar__game-name"
+            type="text"
+            name="game-name"
+            placeholder="Game name"
+            value={this.state.gameName}
+            onChange={this.onGameNameInput}
+            onSubmit={this.onSubmit}
+            ref={(gameName) => { (this.gameName = gameName); }}
+          />
+        </form>
       </div>
     );
   }
 }
 
-TitleBar.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-};
-
-TitleBar.defaultProps = {
-  subtitle: 'Hello',
-};

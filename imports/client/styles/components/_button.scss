@@ -1,28 +1,32 @@
 .button {
-  border: 1px solid $tertiary-color;
-  background: transparent;
-  color: $tertiary-color;
+  background-color: $base-button-bg;
+  border: none;
+  color: $base-button-color;
   cursor: pointer;
-  font-weight: bold;
-  height: 4rem;
-  line-height: 1;
-  margin-left: $min-spacing;
-  outline: none;
-  padding: $min-spacing;
-  transition: background .2s ease, transform .2s ease;
+  font-size: $base-font-size;  
+  margin-top: $small-spacing;
+  padding: $small-spacing;
+  transition: background-color 100ms ease-in;
 
-  &.round {
-    border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
+  &:hover {
+    background-color: lighten($base-button-bg, 5%);
   }
 
-  &:hover, &:focus {
-    background: $secondary-color;
+  &:active, &:focus {
+    background-color: darken($base-button-bg, 10%);
+    border: none;
+    outline: none;
   }
+}
 
-  &:active {
-    background: $secondary-color * 2;
-    transform: scale(1.1);
+.button-player {
+  background-color: transparent;
+  border: 1px solid $base-button-bg;
+  color: $secondary-font-color;
+  margin-right: $small-spacing;
+
+  &:hover {
+    border: 1px solid transparent;
+    color: $base-button-color;
   }
 }

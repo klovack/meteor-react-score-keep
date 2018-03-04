@@ -1,9 +1,39 @@
-// Main Color Pallete
-$font-stack: Helvetica, Arial, sans-serif;
-$root-font-size: 62.5%;
-$primary-color: #17326F;
-$secondary-color: #D9DEAF;
-$tertiary-color: #006C7E;
-$quaternary-color: #f2f2f2;
-$quinary-color: #B84D31;
-$min-spacing: 1.3rem;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+// Main Color Palettes
+$full-black: #0F0E10;
+$darkest-blue: #17232D;
+$greyish: #494F53;
+$washed-white: #ADB6C5;
+$creme: #E4CFAF;
+
+// Spacing
+$gen-spacing: 1.4rem;
+$small-spacing: 1rem;
+
+// Window Width
+$site-max-width: 80%;
+
+// Font Property
+$base-font-color: $creme;
+$secondary-font-color: $darkest-blue;
+$base-font-family: Helvetica, "Roboto", Arial, sans-serif;
+$base-font-size: 1.4rem;
+$medium-large-font-size: 1.6rem;
+$large-font-size: 2rem;
+$largest-font-size: 2.6rem;
+
+// Button Property
+$base-button-bg: $greyish;
+$base-button-color: $washed-white;
+$base-button-border: $washed-white;
+
+// App Property
+$base-app-bg: $full-black;
+
+// Title Bar Property
+$base-title-border-color: $creme;
+
+// Add Player Property
+$base-addP-bg: $creme;
+$base-addP-input-bg: $washed-white;
