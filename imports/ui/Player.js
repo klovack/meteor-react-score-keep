@@ -32,7 +32,7 @@ export default class Player extends React.Component {
 
   render() {
     return (
-      <div className="player-wrapper">
+      <div className={`player-wrapper player-position-${this.props.player.rank}`}>
         <h2>
           {this.props.player.name}
         </h2>

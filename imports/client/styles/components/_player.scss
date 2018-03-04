@@ -1,5 +1,5 @@
 .player-wrapper {
-  background-color: $base-addP-bg;
+  background-color: lighten($base-addP-bg, 15%);
   color: $secondary-font-color;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,18 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.player-position-1 {
+  background-color: $base-addP-bg;
+}
+
+.player-position-2 {
+  background-color: darken($base-addP-bg, 7%);
+}
+
+.player-position-3 {
+  background-color: darken($base-addP-bg, 20%);
 }
 
 @media screen and (max-width: 530px) {
