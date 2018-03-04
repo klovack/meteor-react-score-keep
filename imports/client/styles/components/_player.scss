@@ -27,6 +27,12 @@
   background-color: darken($base-addP-bg, 20%);
 }
 
+.no-player {
+  background-color: $base-addP-bg;
+  font-style: italic;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 530px) {
   .player__property {
     flex-direction: column;
