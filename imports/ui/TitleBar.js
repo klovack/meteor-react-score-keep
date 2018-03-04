@@ -35,7 +35,7 @@ export default class TitleBar extends React.Component {
             className="title-bar__game-name"
             type="text"
             name="game-name"
-            placeholder="Game name"
+            placeholder="Name of the game"
             value={this.state.gameName}
             onChange={this.onGameNameInput}
             onSubmit={this.onSubmit}
